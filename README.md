@@ -5,6 +5,7 @@ Using [RAWG](https://rawg.io/apidocs) might be useful for accessing the relevant
 ## Example use cases
 1. What video games have been released on the PS5 last month?
 2. Can you tell me about the game 'some video game name'?
+
 _Feel free to add more use cases._
 
 ## Required VSCode Extensions
