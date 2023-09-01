@@ -1,0 +1,33 @@
+version: "3.9"
+services:
+  api:
+    container_name: api-gamebot
+    build:
+      context: ../
+      dockerfile: ./docker/api.Dockerfile
+    ports:
+      - "8008:8000"
+    env_file:
+      - ../.env
+    volumes:
+      - ../api/:/usr/local/src/api
+      - ../dev_ui/:/usr/local/src/dev_ui
+      - ../tests/:/usr/local/src/tests
+    command: ["uvicorn", "api.api:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/v1/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+  dev_ui:
+    container_name: dev-ui-gamebot
+    build:
+      context: ../
+      dockerfile: ./docker/dev_ui.Dockerfile
+    ports:
+      - "8088:8080"
+    volumes:
+      - ../api/:/usr/local/src/api
+      - ../dev_ui/:/usr/local/src/dev_ui
+      - ../tests/:/usr/local/src/tests
+      

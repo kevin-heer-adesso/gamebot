@@ -1,0 +1,12 @@
+fastapi==0.101.1
+httpx==0.24.1
+pydantic==2.3.0
+pydantic-settings==2.0.3
+openai==0.27.8
+tiktoken==0.4.0
+langchain==0.0.276
+python-dotenv==1.0.0
+
+streamlit==1.23.1
+streamlit-chat==0.0.2.2
+requests==2.31.0
