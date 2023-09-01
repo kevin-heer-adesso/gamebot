@@ -25,8 +25,9 @@ _Feel free to add more use cases._
 After restarting vscode you now get correct code completion and can run the unit tests.
 
 ## Docker Setup (Running the bot)
-1. cd docker
-2. docker-compose up
-3. [http://localhost:8088](http://localhost:8088)
+1. add .env file to the root directory (where you can later put all the environment variables, e.g. API keys)
+2. cd docker
+3. docker-compose up
+4. [http://localhost:8088](http://localhost:8088)
 
 You can also access the SwaggerUI documentation here: [http://localhost:8008/docs](http://localhost:8008/docs)
